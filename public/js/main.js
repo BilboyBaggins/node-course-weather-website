@@ -1,7 +1,5 @@
 // Uses Fetch API to get data from server
 
-console.log('clientside javascript')
-
 const getWeather = (userInputLocation) => {
     fetch('http://localhost:3000/weather?address=' + userInputLocation).then((response) => {
         response.json().then(( { error, location, forecast } ) => {
