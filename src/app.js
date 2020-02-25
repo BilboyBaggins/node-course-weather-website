@@ -26,21 +26,21 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', { 
         title: 'Weather',
-        name: 'Andrew'
+        name: 'Bilbo'
     }) 
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Us',
-        name: 'Andrew'
+        name: 'Bilbo'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'This is the heckin help page',
-        name: 'Andrew',
+        title: 'Heckin Help Page',
+        name: 'Bilbo',
         message: 'This is my help message which is not actually very helpful'
     })
 })
@@ -79,7 +79,7 @@ app.get('/help/*', (req, res) =>{
     res.render('404', {
         title: '404',
         message: 'Help page not found',
-        name: 'Not Andrew'
+        name: 'Bilbo'
     })
 })
 
@@ -87,7 +87,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
         message: 'Page note found',
-        name: 'Not Andrew'
+        name: 'Bilbo'
     })
 })
 
