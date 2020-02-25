@@ -1,7 +1,7 @@
 // Uses Fetch API to get data from server
 
 const getWeather = (userInputLocation) => {
-    fetch('http://localhost:3000/weather?address=' + userInputLocation).then((response) => {
+    fetch('/weather?address=' + userInputLocation).then((response) => {
         response.json().then(( { error, location, forecast } ) => {
             if(error) {
                 messageOne.textContent = error
