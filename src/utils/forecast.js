@@ -10,7 +10,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback('Invalid request')
         } else {
-            const currentWeather = body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + '°C out. There is a ' + body.currently.precipProbability + '% chance of rain.'
+            const currentWeather = body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + '°C out. There is a ' + body.currently.precipProbability + '% chance of rain. The wind speed is ' + body.currently.windSpeed + ' m/s with gusts up to ' + body.currently.windGust + ' m/s.' 
             callback(undefined, currentWeather)
         }
     })
